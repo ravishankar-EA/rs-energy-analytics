@@ -31,7 +31,7 @@ def compute_availability(total_hours,downtime_hours):
     if total_hours==0:
        return None
     if downtime_hours>total_hours:
-        print('Value Error')
+        raise ValueError('Down Time cannot be greater than Total Hours')
     uptime=total_hours-downtime_hours
     return uptime/total_hours
 
